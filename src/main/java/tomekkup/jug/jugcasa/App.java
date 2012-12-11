@@ -1,7 +1,18 @@
-package kuprowski.jug.jugcasa;
+package tomekkup.jug.jugcasa;
 
-import static kuprowski.jug.jugcasa.Defaults.*;
-import kuprowski.jug.jugcasa.cases.*;
+import tomekkup.jug.jugcasa.cases.DecrCounter;
+import tomekkup.jug.jugcasa.cases.MultiGetSlice;
+import tomekkup.jug.jugcasa.cases.RangeSlice;
+import tomekkup.jug.jugcasa.cases.Delete;
+import tomekkup.jug.jugcasa.cases.GetSuperColumn;
+import tomekkup.jug.jugcasa.cases.GetSuperSlice;
+import tomekkup.jug.jugcasa.cases.GetSlice;
+import tomekkup.jug.jugcasa.cases.GetCounter;
+import tomekkup.jug.jugcasa.cases.IncrCounter;
+import tomekkup.jug.jugcasa.cases.Insert;
+import tomekkup.jug.jugcasa.cases.GetColumn;
+import tomekkup.jug.jugcasa.cases.GetIndexed;
+import static tomekkup.jug.jugcasa.Defaults.*;
 import me.prettyprint.hector.api.Cluster;
 import me.prettyprint.hector.api.Keyspace;
 import me.prettyprint.hector.api.factory.HFactory;

@@ -1,4 +1,4 @@
-package kuprowski.jug.jugcasa;
+package tomekkup.jug.jugcasa;
 
 /**
  *

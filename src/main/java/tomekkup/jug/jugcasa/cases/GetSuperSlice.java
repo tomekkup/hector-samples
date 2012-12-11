@@ -1,4 +1,4 @@
-package kuprowski.jug.jugcasa.cases;
+package tomekkup.jug.jugcasa.cases;
 
 import me.prettyprint.cassandra.serializers.LongSerializer;
 import me.prettyprint.cassandra.serializers.StringSerializer;

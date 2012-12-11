@@ -1,34 +1,33 @@
-package kuprowski.jug.jugcasa.cases;
+package tomekkup.jug.jugcasa.cases;
 
 import me.prettyprint.cassandra.serializers.StringSerializer;
 import me.prettyprint.hector.api.Keyspace;
 import me.prettyprint.hector.api.factory.HFactory;
 import me.prettyprint.hector.api.query.ColumnQuery;
-import me.prettyprint.hector.api.query.SliceQuery;
 
 /**
  *
  * @author tomek
  */
-public class GetSlice extends AbstractCase {
+public class GetColumn extends AbstractCase {
    
     public static void main( String[] args )
     {
-        new GetSlice();
+        new GetColumn();
     }
     
-    public GetSlice() {
+    public GetColumn() {
         super();
     }
     
-    public GetSlice(Keyspace keyspace) {
+    public GetColumn(Keyspace keyspace) {
         super(keyspace);
     }
     
     @Override
     public Object getQueryResult() {
-        SliceQuery<String,String,String> query = HFactory.createSliceQuery(keyspace, StringSerializer.get(), StringSerializer.get(), StringSerializer.get());
-        query.setColumnFamily("CustomerAccounts").setKey("000130101").setRange(null, null, true, 4);
+        ColumnQuery<String,String,String> query = HFactory.createColumnQuery(keyspace, StringSerializer.get(), StringSerializer.get(), StringSerializer.get());
+        query.setColumnFamily("Accounts").setKey("PL14501065882796893457692938").setName("branch");
         
         return query.execute().get();
     }

@@ -1,6 +1,6 @@
-package kuprowski.jug.jugcasa.cases;
+package tomekkup.jug.jugcasa.cases;
 
-import static kuprowski.jug.jugcasa.Defaults.*;
+import static tomekkup.jug.jugcasa.Defaults.*;
 import me.prettyprint.hector.api.Cluster;
 import me.prettyprint.hector.api.Keyspace;
 import me.prettyprint.hector.api.factory.HFactory;

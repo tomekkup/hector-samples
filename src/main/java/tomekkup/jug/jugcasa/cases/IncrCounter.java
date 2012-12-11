@@ -1,4 +1,4 @@
-package kuprowski.jug.jugcasa.cases;
+package tomekkup.jug.jugcasa.cases;
 
 import me.prettyprint.cassandra.serializers.StringSerializer;
 import me.prettyprint.hector.api.Keyspace;
@@ -9,27 +9,25 @@ import me.prettyprint.hector.api.mutation.Mutator;
  *
  * @author tomek
  */
-public class DecrCounter extends AbstractCase {
-   
-    public static void main( String[] args )
-    {
-        new DecrCounter();
+public class IncrCounter extends AbstractCase {
+
+    public static void main(String[] args) {
+        new IncrCounter();
     }
-    
-    public DecrCounter() {
+
+    public IncrCounter() {
         super();
     }
-    
-    public DecrCounter(Keyspace keyspace) {
+
+    public IncrCounter(Keyspace keyspace) {
         super(keyspace);
     }
-    
+
     @Override
     public String getQueryResult() {
         Mutator<String> mutator = HFactory.createMutator(keyspace, StringSerializer.get());
-        
-        mutator.decrementCounter("jug", "Countery", "foo", 1L);
-        
+        mutator.incrementCounter("jug", "Countery", "foo", 1L);
+
         return null;
     }
 }
